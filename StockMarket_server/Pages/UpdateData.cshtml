@@ -1,0 +1,29 @@
+﻿@page
+@model StockMarket_server.Pages.UpdateDataModel
+@{
+
+}
+
+<h1>Enter Value For Each Content</h1>
+
+
+@foreach (var data in Model.GetIdData)
+{
+<form method="get" asp-page="/MakeUpdate" asp-route-Id="@Model.Selected">
+    <label for="Id">Id</label>
+    <input type="number" id="Id" name="Id" placeholder="@Model.Selected" >
+    <label for="trade_code">Trade Code:</label>
+    <input type="text" id="trade_code" name="trade_code" placeholder="@data.Trade_Code"><br><br>
+    <label for="high">High:</label>
+    <input type="text" id="high" name="high" placeholder="@data.High"><br><br>
+    <label for="low">Low:</label>
+    <input type="text" id="low" name="low" placeholder="@data.Low"><br><br>
+    <label for="open">Open:</label>
+    <input type="text" id="open" name="open" placeholder="@data.Open"><br><br>
+    <label for="close">Close:</label>
+    <input type="text" id="close" name="close" placeholder="@data.Close"><br><br>
+    <label for="volume">Volume:</label>
+    <input type="text" id="volume" name="volume" placeholder="@data.Volume"><br><br>
+    <input type="submit" value="Submit">
+</form>
+}

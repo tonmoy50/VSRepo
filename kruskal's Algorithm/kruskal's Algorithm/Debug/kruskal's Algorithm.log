@@ -1,0 +1,6 @@
+﻿  Kruskal's.cpp
+  Vector_Graph.cpp
+C:\Users\TONMOY\source\repos\kruskal's Algorithm\kruskal's Algorithm\Vector_Graph.cpp(53,20): warning C4018:  '<': signed/unsigned mismatch
+  Generating Code...
+C:\Users\TONMOY\source\repos\kruskal's Algorithm\kruskal's Algorithm\Vector_Graph.cpp(60,20): warning C4018:  '<': signed/unsigned mismatch
+  kruskal's Algorithm.vcxproj -> C:\Users\TONMOY\source\repos\kruskal's Algorithm\Debug\kruskal's Algorithm.exe

@@ -1,0 +1,13 @@
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.exe
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.deps.json
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.runtimeconfig.json
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.runtimeconfig.dev.json
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.dll
+C:\Users\TONMOY\source\repos\C_sharp_practice\bin\Debug\netcoreapp3.1\C_sharp_practice.pdb
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.csprojAssemblyReference.cache
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.AssemblyInfoInputs.cache
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.AssemblyInfo.cs
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.csproj.CoreCompileInputs.cache
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.dll
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.pdb
+C:\Users\TONMOY\source\repos\C_sharp_practice\obj\Debug\netcoreapp3.1\C_sharp_practice.genruntimeconfig.cache

@@ -1,0 +1,201 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+
+    
+
+
+}
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    <p>Learn about <a href="https://github.com/tonmoy50">Me</a>.</p>
+</div>
+
+<form method="get" action="">
+    <select name="trade_codes" id="trade_codes">
+        @foreach (var item in Model.Trades)
+        {
+            <option value="@item">@item</option>
+        }
+
+    </select>
+    <button type="submit" value="View">View</button>
+</form>
+
+@if (Model.SelectedData != null)
+{
+    <span>
+        <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+        <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+
+
+            var data = google.visualization.arrayToDataTable([
+                ['Date', 'High', 'Low'],
+
+                @foreach (var items in Model.GetRecords)
+                {
+
+                    <text>[@items.Id, @items.High, @items.Low],</text>
+                }
+
+            ]);
+
+            var options = {
+                title: 'Stock Stats High-Low',
+                curveType: 'function',
+                legend: {'position':'bottom'},
+                haxis: { title: 'Date' },
+                pointsVisible: true
+            };
+
+            var chart = new google.visualization.LineChart(document.getElementById('curve_chart'));
+
+            chart.draw(data, options);
+        }
+        </script>
+
+
+        <div id="curve_chart" style="width: 900px; height: 500px"></div>
+
+
+        <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+
+
+            var data2 = google.visualization.arrayToDataTable([
+                ['Date', 'Open', 'Close'],
+
+                @foreach (var items in Model.GetRecords)
+                {
+
+                    <text>[@items.Id, @items.Open, @items.Close],</text>
+                }
+
+            ]);
+
+            var options2 = {
+                title: 'Stock Stats Open-Close',
+                curveType: 'function',
+                legend: {'position':'bottom'},
+                haxis: { title: 'Date' },
+                pointsVisible: true
+            };
+
+            var chart2 = new google.visualization.LineChart(document.getElementById('curve_chart2'));
+
+            chart2.draw(data2, options2);
+        }
+        </script>
+
+        <div id="curve_chart2" style="width: 900px; height: 500px"></div>
+
+        <script type="text/javascript">
+        google.charts.load('current', { 'packages': ['corechart'] });
+        google.charts.setOnLoadCallback(drawChart);
+
+        function drawChart() {
+
+
+
+            var data3 = google.visualization.arrayToDataTable([
+                ['Date', 'Volume'],
+
+                @foreach (var items in Model.GetRecords)
+                {
+
+                    <text>[@items.Id, @items.Volume],</text>
+                }
+
+            ]);
+
+            var options3 = {
+                title: 'Stock Stats Volume',
+                curveType: 'function',
+                legend: {'position':'bottom'},
+                haxis: { title: 'Date' },
+                pointsVisible: true
+            };
+
+            var chart3 = new google.visualization.LineChart(document.getElementById('curve_chart3'));
+
+            chart3.draw(data3, options3);
+        }
+        </script>
+
+        <div id="curve_chart3" style="width: 900px; height: 500px"></div>
+
+    </span>
+}
+
+
+<form method="get">
+    <div class="container">
+        <table class="table">
+            <thead>
+                @if (Model.SelectedData != null)
+                {
+                    <span>
+                        <tr>
+                            <th>Date</th>
+                            <th>Trade Code</th>
+                            <th>High</th>
+                            <th>Low</th>
+                            <th>Open</th>
+                            <th>Close</th>
+                            <th>Volume</th>
+                        </tr>
+
+                    </span>
+                }
+
+            </thead>
+            <tbody>
+                @foreach (var data in Model.GetRecords)
+                {
+                    
+                    <tr>
+                        <td>@data.Date</td>
+                        <td>@data.Trade_Code</td>
+                        <td>@data.High</td>
+                        <td>@data.Low</td>
+                        <td>@data.Open</td>
+                        <td>@data.Close</td>
+                        <td>@data.Volume</td>
+                        
+                        <td> <a asp-page="/UpdateData" asp-route-Id="@data.Id" class="btn btn-primary m-1">Edit</a> </td>
+
+                    </tr>
+                }
+            </tbody>
+
+        </table>
+    </div>
+</form>
+
+
+
+
+
+
+
+    
+
+
+
+
+
+
+
+

@@ -1,0 +1,91 @@
+﻿@using StockMarket.Models
+@using StockMarket.Component
+@using StockMarket.Services
+@using System.Collections.Generic
+@using System
+@inject JsonService DataService
+
+
+
+
+
+<div>
+    <select name="cars" id="cars">
+        @foreach (var item in Names)
+        {
+            <option value=@item>@item</option>
+        }
+    </select>
+        
+</div>
+<h3>@selected</h3>
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Trade Code</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in DataService.GetProducts())
+            {
+                
+                <tr>
+                    <td>@data.Date</td>
+                    <td>@data.Trade_code</td>
+                    <td>@data.High</td>
+                    <td>@data.Low</td>
+                    <td>@data.Open</td>
+                    <td>@data.Close</td>
+                    <td>@data.Volume</td>
+                </tr>
+
+            }
+
+
+        </tbody>
+    </table>
+</div>
+
+
+
+@code {
+
+
+
+
+
+    public HashSet<string> Names
+    {
+        get
+        {
+            HashSet<string> names = new HashSet<string>();
+
+            foreach (var item in DataService.GetProducts())
+            {
+                names.Add(item.Trade_code);
+            }
+
+            return names;
+        }
+    }
+
+
+
+    HashSet<string> data = new HashSet<string>();
+
+    string selected;
+    
+
+    
+
+
+
+
+}

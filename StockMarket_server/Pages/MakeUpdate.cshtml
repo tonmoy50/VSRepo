@@ -1,0 +1,18 @@
+﻿@page
+@model StockMarket_server.Pages.MakeUpdateModel
+@{
+}
+
+
+@if (Model.GetSuccess == 1)
+{
+<span>
+    <h1>Success....Auto Redirecting to HomePage</h1>
+    <meta http-equiv="Refresh" content="3; url= /Index" />
+</span>
+}
+else
+{   
+    <h1>DBError Unable To Update Data...Redirecting to HomePage</h1>
+    <meta http-equiv="Refresh" content="3; url= /Index" />
+}

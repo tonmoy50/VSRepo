@@ -1,0 +1,78 @@
+﻿@page
+
+@model IndexModel
+@{
+    ViewData["Title"] = "Stock Market";
+
+    if (Model.SelectedData == null)
+    {
+        Model.SelectedData = "1JANATAMF";
+    }
+
+
+
+}
+
+
+
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+    
+</div>
+
+
+
+<form method="get" action="">
+    <select name="trade_codes" id="trade_codes" >
+        @foreach (var item in Model.Trade_Code)
+        {
+            <option value="@item" >@item</option>
+        }
+
+    </select>
+    <button type="submit" value="View">View</button>
+</form>
+
+
+
+ 
+
+
+<div class="container">
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Trade Code</th>
+                <th>High</th>
+                <th>Low</th>
+                <th>Open</th>
+                <th>Close</th>
+                <th>Volume</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var data in Model.Datas)
+            {
+                
+                @if (Model.SelectedData == data.Trade_code)
+                {
+                    <tr>
+                        <td>@data.Date</td>
+                        <td>@data.Trade_code</td>
+                        <td>@data.High</td>
+                        <td>@data.Low</td>
+                        <td>@data.Open</td>
+                        <td>@data.Close</td>
+                        <td>@data.Volume</td>
+                    </tr>
+                }
+
+
+            }
+
+
+        </tbody>
+    </table>
+</div>

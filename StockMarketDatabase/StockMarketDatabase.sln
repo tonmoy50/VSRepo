@@ -1,0 +1,27 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30406.217
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{00D1A9C2-B5F0-4AF3-8072-F6C62B433612}") = "StockMarketDatabase", "StockMarketDatabase.sqlproj", "{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F7F49AF0-8BA2-4461-BDCC-E07344883FFF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {435091DE-D56A-4527-8354-3068C4D0BDD0}
+	EndGlobalSection
+EndGlobal
